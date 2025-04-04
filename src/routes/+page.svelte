@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import ItemSequence from '$lib/item_sequence.svelte';
+	import SlotConfig from '$lib/slot_config.svelte';
+</script>
+
+<svelte:head>
+	<link rel="stylesheet" href="/global.css" />
+</svelte:head>
+<div class="main">
+	<ItemSequence></ItemSequence>
+	<SlotConfig></SlotConfig>
+</div>
+
+<style>
+	.main {
+		display: table;
+	}
+</style>
