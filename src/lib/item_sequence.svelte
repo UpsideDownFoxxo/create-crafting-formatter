@@ -24,7 +24,7 @@
 </script>
 
 <div class="container">
-	<h2>Item Sequence</h2>
+	<h2 class="header">Item Sequence</h2>
 	<input bind:value={input_val} />
 	{#if val.err}
 		<p>{val.err}</p>

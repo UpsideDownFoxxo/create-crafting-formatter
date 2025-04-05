@@ -1,13 +1,96 @@
+:root {
+  --text-50: #f5f2ef;
+  --text-100: #ebe4e0;
+  --text-200: #d7cac1;
+  --text-300: #c3afa2;
+  --text-400: #af9583;
+  --text-500: #9c7a63;
+  --text-600: #7c6250;
+  --text-700: #5d493c;
+  --text-800: #3e3128;
+  --text-900: #1f1814;
+  --text-950: #100c0a;
+
+  --background-50: #f5eff1;
+  --background-100: #ecdfe3;
+  --background-200: #d8c0c8;
+  --background-300: #c5a0ac;
+  --background-400: #b18190;
+  --background-500: #9e6174;
+  --background-600: #7e4e5d;
+  --background-700: #5f3a46;
+  --background-800: #3f272f;
+  --background-900: #201317;
+  --background-950: #100a0c;
+
+  --primary-50: #e5fcff;
+  --primary-100: #ccf8ff;
+  --primary-200: #99f1ff;
+  --primary-300: #66ebff;
+  --primary-400: #33e4ff;
+  --primary-500: #00ddff;
+  --primary-600: #00b1cc;
+  --primary-700: #008599;
+  --primary-800: #005866;
+  --primary-900: #002c33;
+  --primary-950: #00161a;
+
+  --secondary-50: #eff6f5;
+  --secondary-100: #deedeb;
+  --secondary-200: #bedad8;
+  --secondary-300: #9dc8c4;
+  --secondary-400: #7cb6b1;
+  --secondary-500: #5ca39d;
+  --secondary-600: #49837e;
+  --secondary-700: #37625e;
+  --secondary-800: #25413f;
+  --secondary-900: #12211f;
+  --secondary-950: #091010;
+
+  --accent-50: #eff0f6;
+  --accent-100: #dee0ed;
+  --accent-200: #bec2da;
+  --accent-300: #9da3c8;
+  --accent-400: #7c84b6;
+  --accent-500: #5c65a3;
+  --accent-600: #495183;
+  --accent-700: #373d62;
+  --accent-800: #252941;
+  --accent-900: #121421;
+  --accent-950: #090a10;
+}
+
 html {
-  background-color: gray;
+  background-color: var(--background-900);
+  font-family: 'Inter', ui-sans-serif;
+}
+
+
+p {
+  font-family: "Inter", ui-sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-size: 0.8rem;
+  color: var(--text-50);
+}
+
+h2 {
+  font-family: 'Inter', ui-sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+
+  margin: 0;
+  color: var(--text-50);
 }
 
 .container {
-  border: 4px black solid;
+
   padding: 1rem;
   display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-800);
 }
 
 .code {
@@ -22,6 +105,9 @@ html {
   padding: 4px;
 }
 
-h2 {
-  margin: 0;
+
+.brass-connected {
+  background-image: url('https://github.com/Creators-of-Create/Create/blob/mc1.20.1/dev/src/main/resources/assets/create/textures/block/brass_casing_connected.png?raw=true');
+  background-size: 800%;
+  image-rendering: pixelated;
 }
