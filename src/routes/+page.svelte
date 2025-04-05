@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import ItemSequence from '$lib/item_sequence.svelte';
 	import SlotConfig from '$lib/slot_config.svelte';
 	import { writable } from 'svelte/store';
@@ -7,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/global.css" />
+	<link rel="stylesheet" href="{base}/global.css" />
 </svelte:head>
 
 <div class="main">
