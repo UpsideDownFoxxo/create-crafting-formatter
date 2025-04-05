@@ -17,13 +17,12 @@ export function toBase32(n: bigint, segs: number) {
   return o;
 }
 
-export function fromBase8(s: string): Result<[bigint, string, number], InvalidTypeError> {
+export function fromBase8(s: string, limit: number = 25): Result<[bigint, string, number], InvalidTypeError> {
   if (s.length == 0) {
-    return Err("Sequence too short")
+    return Err('Sequence too short!')
   }
-
-  if (s.length > 25) {
-    return Err("Sequence too long")
+  if (s.length != limit) {
+    return Err(`Expected ${limit} characters, got ${s.length}`)
   }
 
   if (/[^0-7]/.test(s)) {

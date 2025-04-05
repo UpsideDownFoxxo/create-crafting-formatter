@@ -9,32 +9,23 @@
 		};
 	};
 
-	let val = $state({ err: '' } as State);
-	let timer: number;
+	let { limit } = $props();
 
-	const debounce = (v: string) => {
-		clearTimeout(timer);
-		timer = setTimeout(() => {
-			const result = fromBase8(v);
-
-			if (result.getErr()) {
-				val = { err: result.getErr()?.message as string };
-				return;
-			}
-			const res = result.unwrap();
-			console.log(res);
-			val = { ok: { intermediate: res[1], result: toBase32(res[0], res[2]) } };
-		}, 100);
-	};
+	let input_val = $state('');
+	let val = $derived.by(() => {
+		const result = fromBase8(input_val, limit);
+		if (result.getErr()) {
+			return { err: result.getErr()?.message as string } as State;
+		}
+		const res = result.unwrap();
+		console.log(res);
+		return { ok: { intermediate: res[1], result: toBase32(res[0], res[2]) } } as State;
+	});
 </script>
 
 <div class="container">
 	<h2>Item Sequence</h2>
-	<input
-		onkeyup={({ target }) => {
-			debounce((target as HTMLInputElement).value);
-		}}
-	/>
+	<input bind:value={input_val} />
 	{#if val.err}
 		<p>{val.err}</p>
 	{/if}
