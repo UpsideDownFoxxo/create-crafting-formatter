@@ -1,69 +1,103 @@
 :root {
-  --text-50: #f5f2ef;
-  --text-100: #ebe4e0;
-  --text-200: #d7cac1;
-  --text-300: #c3afa2;
-  --text-400: #af9583;
-  --text-500: #9c7a63;
-  --text-600: #7c6250;
-  --text-700: #5d493c;
-  --text-800: #3e3128;
-  --text-900: #1f1814;
-  --text-950: #100c0a;
+  --text: #ede7e3;
+  --bg: #1d1829;
+  --primary: #009fb8;
+  --secondary: #3d6c68;
+  --accent: #737bb0;
+  --textcontrast: #64d97b;
+  --bgcontrast: #64d97b;
+  --primarycontrast: #ffdd00;
+  --secondarycontrast: #ffdd00;
+  --accentcontrast: #ffdd00;
+  --text5: hsl(24, 22%, 91%, 5%);
+  --text10: hsl(24, 22%, 91%, 10%);
+  --text15: hsl(24, 22%, 91%, 15%);
+  --text20: hsl(24, 22%, 91%, 20%);
+  --text25: hsl(24, 22%, 91%, 25%);
+  --text30: hsl(24, 22%, 91%, 30%);
+  --text35: hsl(24, 22%, 91%, 35%);
+  --text40: hsl(24, 22%, 91%, 40%);
+  --text45: hsl(24, 22%, 91%, 45%);
+  --text50: hsl(24, 22%, 91%, 50%);
+  --text55: hsl(24, 22%, 91%, 55%);
+  --text60: hsl(24, 22%, 91%, 60%);
+  --text65: hsl(24, 22%, 91%, 65%);
+  --text70: hsl(24, 22%, 91%, 70%);
+  --text75: hsl(24, 22%, 91%, 75%);
+  --text80: hsl(24, 22%, 91%, 80%);
+  --text85: hsl(24, 22%, 91%, 85%);
+  --text90: hsl(24, 22%, 91%, 90%);
+  --text95: hsl(24, 22%, 91%, 95%);
+  --primary5: hsl(188, 100%, 36%, 5%);
+  --primary10: hsl(188, 100%, 36%, 10%);
+  --primary15: hsl(188, 100%, 36%, 15%);
+  --primary20: hsl(188, 100%, 36%, 20%);
+  --primary25: hsl(188, 100%, 36%, 25%);
+  --primary30: hsl(188, 100%, 36%, 30%);
+  --primary35: hsl(188, 100%, 36%, 35%);
+  --primary40: hsl(188, 100%, 36%, 40%);
+  --primary45: hsl(188, 100%, 36%, 45%);
+  --primary50: hsl(188, 100%, 36%, 50%);
+  --primary55: hsl(188, 100%, 36%, 55%);
+  --primary60: hsl(188, 100%, 36%, 60%);
+  --primary65: hsl(188, 100%, 36%, 65%);
+  --primary70: hsl(188, 100%, 36%, 70%);
+  --primary75: hsl(188, 100%, 36%, 75%);
+  --primary80: hsl(188, 100%, 36%, 80%);
+  --primary85: hsl(188, 100%, 36%, 85%);
+  --primary90: hsl(188, 100%, 36%, 90%);
+  --primary95: hsl(188, 100%, 36%, 95%);
+  --secondary5: hsl(175, 28%, 33%, 5%);
+  --secondary10: hsl(175, 28%, 33%, 10%);
+  --secondary15: hsl(175, 28%, 33%, 15%);
+  --secondary20: hsl(175, 28%, 33%, 20%);
+  --secondary25: hsl(175, 28%, 33%, 25%);
+  --secondary30: hsl(175, 28%, 33%, 30%);
+  --secondary35: hsl(175, 28%, 33%, 35%);
+  --secondary40: hsl(175, 28%, 33%, 40%);
+  --secondary45: hsl(175, 28%, 33%, 45%);
+  --secondary50: hsl(175, 28%, 33%, 50%);
+  --secondary55: hsl(175, 28%, 33%, 55%);
+  --secondary60: hsl(175, 28%, 33%, 60%);
+  --secondary65: hsl(175, 28%, 33%, 65%);
+  --secondary70: hsl(175, 28%, 33%, 70%);
+  --secondary75: hsl(175, 28%, 33%, 75%);
+  --secondary80: hsl(175, 28%, 33%, 80%);
+  --secondary85: hsl(175, 28%, 33%, 85%);
+  --secondary90: hsl(175, 28%, 33%, 90%);
+  --secondary95: hsl(175, 28%, 33%, 95%);
+  --accent5: hsl(232, 28%, 57%, 5%);
+  --accent10: hsl(232, 28%, 57%, 10%);
+  --accent15: hsl(232, 28%, 57%, 15%);
+  --accent20: hsl(232, 28%, 57%, 20%);
+  --accent25: hsl(232, 28%, 57%, 25%);
+  --accent30: hsl(232, 28%, 57%, 30%);
+  --accent35: hsl(232, 28%, 57%, 35%);
+  --accent40: hsl(232, 28%, 57%, 40%);
+  --accent45: hsl(232, 28%, 57%, 45%);
+  --accent50: hsl(232, 28%, 57%, 50%);
+  --accent55: hsl(232, 28%, 57%, 55%);
+  --accent60: hsl(232, 28%, 57%, 60%);
+  --accent65: hsl(232, 28%, 57%, 65%);
+  --accent70: hsl(232, 28%, 57%, 70%);
+  --accent75: hsl(232, 28%, 57%, 75%);
+  --accent80: hsl(232, 28%, 57%, 80%);
+  --accent85: hsl(232, 28%, 57%, 85%);
+  --accent90: hsl(232, 28%, 57%, 90%);
+  --accent95: hsl(232, 28%, 57%, 95%);
+}
 
-  --background-50: #f5eff1;
-  --background-100: #ecdfe3;
-  --background-200: #d8c0c8;
-  --background-300: #c5a0ac;
-  --background-400: #b18190;
-  --background-500: #9e6174;
-  --background-600: #7e4e5d;
-  --background-700: #5f3a46;
-  --background-800: #3f272f;
-  --background-900: #201317;
-  --background-950: #100a0c;
-
-  --primary-50: #e5fcff;
-  --primary-100: #ccf8ff;
-  --primary-200: #99f1ff;
-  --primary-300: #66ebff;
-  --primary-400: #33e4ff;
-  --primary-500: #00ddff;
-  --primary-600: #00b1cc;
-  --primary-700: #008599;
-  --primary-800: #005866;
-  --primary-900: #002c33;
-  --primary-950: #00161a;
-
-  --secondary-50: #eff6f5;
-  --secondary-100: #deedeb;
-  --secondary-200: #bedad8;
-  --secondary-300: #9dc8c4;
-  --secondary-400: #7cb6b1;
-  --secondary-500: #5ca39d;
-  --secondary-600: #49837e;
-  --secondary-700: #37625e;
-  --secondary-800: #25413f;
-  --secondary-900: #12211f;
-  --secondary-950: #091010;
-
-  --accent-50: #eff0f6;
-  --accent-100: #dee0ed;
-  --accent-200: #bec2da;
-  --accent-300: #9da3c8;
-  --accent-400: #7c84b6;
-  --accent-500: #5c65a3;
-  --accent-600: #495183;
-  --accent-700: #373d62;
-  --accent-800: #252941;
-  --accent-900: #121421;
-  --accent-950: #090a10;
+* {
+  box-sizing: border-box;
 }
 
 html {
-  background-color: var(--background-900);
+  background-color: var(--bg);
   font-family: 'Inter', ui-sans-serif;
+  display: flex;
+  justify-content: center;
 }
+
 
 
 p {
@@ -71,26 +105,27 @@ p {
   font-weight: 500;
   letter-spacing: normal;
   font-size: 0.8rem;
-  color: var(--text-50);
+  color: var(--text);
 }
 
 h2 {
   font-family: 'Inter', ui-sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0;
-
+  text-align: center;
   margin: 0;
-  color: var(--text-50);
+  color: var(--text);
 }
 
 .container {
-
-  padding: 1rem;
-  display: block;
+  min-width: 32rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  background-color: var(--secondary-800);
+  background-color: var(--secondary10);
+  padding-top: 1rem;
+  overflow: hidden;
 }
 
 .code {
@@ -98,16 +133,10 @@ h2 {
 }
 
 .output {
-  border: 2px black solid;
-  border-radius: 5px;
-  background-color: lightgray;
-  display: inline-block;
-  padding: 4px;
-}
-
-
-.brass-connected {
-  background-image: url('https://github.com/Creators-of-Create/Create/blob/mc1.20.1/dev/src/main/resources/assets/create/textures/block/brass_casing_connected.png?raw=true');
-  background-size: 800%;
-  image-rendering: pixelated;
+  background-color: var(--primary85);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }

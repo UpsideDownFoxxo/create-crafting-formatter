@@ -32,12 +32,7 @@
 			{#if s.includes(index)}
 				<div></div>
 			{/if}
-			<input
-				type="checkbox"
-				class="brass-connected"
-				{checked}
-				onchange={() => updateCheckbox(index)}
-			/>
+			<input type="checkbox" {checked} onchange={() => updateCheckbox(index)} />
 		{/each}
 	</div>
 	<p class="code output">{str}</p>
@@ -49,7 +44,8 @@
 		height: 32rem;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		gap: 0;
+		gap: 6px;
+		margin: 1rem;
 	}
 
 	p {
@@ -58,34 +54,31 @@
 	}
 
 	input[type='checkbox'] {
-		width: 100%;
-		height: 100%;
+		width: 90%;
+		height: 90%;
 		appearance: none;
-		background-color: #ffffff00;
+		background-color: var(--secondary20);
 		margin: 0;
-		border: 0;
-		padding: 0;
 
 		font: inherit;
 		color: currentColor;
+		border-radius: 1rem;
 		transform: translateY(-0.075em);
-		display: grid;
-		place-content: center;
+		cursor: pointer;
+		transition: transform 120ms;
+		place-self: center;
 	}
 
-	input[type='checkbox']::before {
-		content: '';
-		width: 2.5rem;
-		height: 2.5rem;
-		transform: scale(1);
-		transition: 120ms transform ease-in-out;
-		/* transform-origin: bottom left; */
-		background-image: url('https://github.com/Creators-of-Create/Create/blob/mc1.20.1/dev/src/main/resources/assets/create/textures/block/crafter_thingies.png?raw=true');
-		background-size: 267%;
-		/* background-color: red; */
+	input[type='checkbox']:checked {
+		background-color: var(--secondary70);
 	}
 
-	input[type='checkbox']:checked::before {
-		transform: scale(0);
+	input[type='checkbox']:hover {
+		transform: translate(0, -0.3rem) scale(105%);
+		background-color: var(--secondary45);
+	}
+
+	input[type='checkbox']:hover:checked {
+		background-color: var(--secondary80);
 	}
 </style>
