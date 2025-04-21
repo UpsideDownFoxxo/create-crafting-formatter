@@ -18,6 +18,10 @@ export function toBase32(n: bigint, segs: number) {
 }
 
 export function fromBase8(s: string, limit: number = 25): Result<[bigint, string, number], InvalidTypeError> {
+  if (/[^0-7]/.test(s)) {
+    return Err("Unsupported Character in sequence")
+  }
+
   if (s.length == 0) {
     return Err('Sequence too short!')
   }
@@ -25,9 +29,6 @@ export function fromBase8(s: string, limit: number = 25): Result<[bigint, string
     return Err(`Expected ${limit} characters, got ${s.length}`)
   }
 
-  if (/[^0-7]/.test(s)) {
-    return Err("Unsupported Character in sequence")
-  }
 
   const chars = s.split("");
   let n = BigInt(0);

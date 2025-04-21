@@ -30,14 +30,6 @@
 	{/if}
 
 	{#if val.ok}
-		{#each val.ok.intermediate
-			.match(/(.{1,20})/g)
-			?.reverse() as ArrayLike<string> as item, index (index)}
-			<p class="code">
-				{item}
-			</p>
-		{/each}
-
 		<p class="code output">{val.ok.result}</p>
 	{/if}
 </div>
