@@ -1,24 +1,7 @@
-<svelte:options />
-
 <script lang="ts">
-	import { writable } from 'svelte/store';
-
 	const s = [0, 3, 18];
-	let checks = writable(Array(21).fill(false) as boolean[]);
 
-	$effect(() => {
-		let n = 0;
-		$checks.forEach((e) => (e ? n++ : n));
-		checkedNumUpdate(n);
-	});
-
-	let { checkedNumUpdate } = $props();
-
-	let str = $derived.by(() => {
-		const num = $checks.reduce((a, e, i) => a | ((e ? 1 : 0) << i), 0);
-		let str = num.toString(16).toUpperCase();
-		return '0'.repeat(6 - str.length) + str;
-	});
+	let { checks, check_str } = $props();
 
 	function updateCheckbox(index: number) {
 		$checks[index] = !$checks[index];
@@ -35,7 +18,7 @@
 			<input type="checkbox" {checked} onchange={() => updateCheckbox(index)} />
 		{/each}
 	</div>
-	<p class="code output">{str}</p>
+	<p class="code output">{check_str}</p>
 </div>
 
 <style>
