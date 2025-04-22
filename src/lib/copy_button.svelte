@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let button = $state() as HTMLButtonElement;
 
 	function animate() {
@@ -25,7 +26,7 @@
 	<div class="content code output">
 		<p class="code">{text}</p>
 		<button bind:this={button} onclick={animate} disabled={!valid}>
-			<img src="/copy-icon.svg" alt="" />
+			<img src="{base}/copy-icon.svg" alt="" />
 		</button>
 	</div>
 </div>
